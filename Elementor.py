@@ -4,8 +4,10 @@ import urllib2
 import threading
 import json
 
-class ProtractorCommand(sublime_plugin.TextCommand):
+
+class ElementorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
+        """Starting point for the plugin"""
         selections = [];
         sels = self.view.sel()
         for sel in sels:
@@ -14,7 +16,7 @@ class ProtractorCommand(sublime_plugin.TextCommand):
         threads = []
         for sel in sels:
             string = self.view.substr(sel)
-            thread = ElementExplorerCall(sel, string, 5)
+            thread = ElementorCall(sel, string, 5)
             threads.append(thread)
             thread.start()
 
@@ -31,7 +33,7 @@ class ProtractorCommand(sublime_plugin.TextCommand):
             offset = self.show_results(thread)
         threads = next_threads
 
-        if len(threads):            
+        if len(threads):
             sublime.set_timeout(lambda: self.handle_threads(threads), 100)
             return
 
@@ -48,7 +50,8 @@ class ProtractorCommand(sublime_plugin.TextCommand):
                 # by.css('span')
                 sublime.status_message(response)
 
-class ElementExplorerCall(threading.Thread):
+
+class ElementorCall(threading.Thread):
     def __init__(self, sel, selectedText, timeout):
         self.sel = sel
         self.selectedText = selectedText

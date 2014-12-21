@@ -8,7 +8,7 @@ import json
 class ElementorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         """Starting point for the plugin"""
-        selections = [];
+        selections = []
         sels = self.view.sel()
         for sel in sels:
             selections.append(self.view.substr(sel))

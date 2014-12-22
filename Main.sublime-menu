@@ -1,0 +1,12 @@
+[
+    {
+        "id": "tools",
+        "children": [
+            {
+                "id": "wrap",
+                "caption": "Run selection in elementor",
+                "command": "elementor"
+            }
+        ]
+    }
+]

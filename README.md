@@ -1,7 +1,9 @@
 elementor-sublime
 =================
 
-A sublime plugin to connect to Protractor's elementor
+A sublime plugin to test your protractor locators with
+[elementor](https://github.com/andresdominguez/elementor).
+
 
 ## How to install it
 

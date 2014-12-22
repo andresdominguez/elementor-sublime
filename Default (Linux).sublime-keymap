@@ -1,0 +1,9 @@
+[
+    {
+        "keys": 
+        [
+            "ctrl+shift+p"
+        ],
+        "command": "elementor"
+    }
+]

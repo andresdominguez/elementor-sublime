@@ -2,7 +2,7 @@
     {
         "keys": 
         [
-            "ctrl+shift+p"
+            "alt+shift+p"
         ],
         "command": "elementor"
     }

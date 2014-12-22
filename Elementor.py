@@ -46,8 +46,7 @@ class ElementorCommand(sublime_plugin.TextCommand):
                 response = ''
                 for key, value in results.items():
                     response = '%s: %s' % (key, value)
-                print "Andres"
-                # by.css('span')
+                print response
                 sublime.status_message(response)
 
 

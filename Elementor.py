@@ -1,8 +1,9 @@
 import sublime, sublime_plugin
-import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
+import urllib
+import urllib2
 import threading
 import json
+
 
 class ElementorCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -39,13 +40,13 @@ class ElementorCommand(sublime_plugin.TextCommand):
     def show_results(self, thread):
         """Show the results of the element explorer HTTP request"""
         if thread.result:
-            json_result = json.loads(thread.result.decode())
+            json_result = json.loads(thread.result)
             if json_result['results']:
                 results = json_result['results']
                 response = ''
-                for key, value in list(results.items()):
+                for key, value in results.items():
                     response = '%s: %s' % (key, value)
-                print(response)
+                print response
                 sublime.status_message(response)
 
 
@@ -60,17 +61,15 @@ class ElementorCall(threading.Thread):
 
     def run(self):
         try:
-            data = urllib.parse.urlencode({'popupInput': self.selectedText})
-            request = urllib.request.Request('http://localhost:13000/testSelector?' + data)
-            http_file = urllib.request.urlopen(request, timeout=self.timeout)
+            data = urllib.urlencode({'popupInput': self.selectedText})
+            request = urllib2.Request('http://localhost:13000/testSelector?' + data)
+            http_file = urllib2.urlopen(request, timeout=self.timeout)
             self.result = http_file.read()
             return
 
-        except (urllib.error.HTTPError) as error:
-            (e) = error
+        except (urllib2.HTTPError) as (e):
             err = '%s: HTTP error %s contacting API' % (__name__, str(e.code))
-        except (urllib.error.URLError) as error:
-            (e) = error
+        except (urllib2.URLError) as (e):
             err = '%s: URL error %s contacting API' % (__name__, str(e.reason))
 
         sublime.error_message(err)

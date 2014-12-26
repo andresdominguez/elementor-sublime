@@ -1,7 +1,7 @@
 elementor-sublime
 =================
 
-A Sublime plugin to test your protractor locators with
+A Sublime 3 plugin to test your protractor locators with
 [elementor](https://github.com/andresdominguez/elementor).
 
 ## How to install it
@@ -16,8 +16,8 @@ Create a directory called *Elementor* under Sublime's Packages directory and
 copy the cloned directory
 
 ```shell
-$ mkdir ~/Library/Application Support/Sublime Text 2/Packages/Elementor
-$ cp elementor-sublime/* ~/Library/Application Support/Sublime Text 2/Packages/Elementor
+$ mkdir ~/Library/Application Support/Sublime Text 3/Packages/Elementor
+$ cp elementor-sublime/* ~/Library/Application Support/Sublime Text 3/Packages/Elementor
 ```
 
 ## How to use it

@@ -6,19 +6,7 @@ A Sublime plugin to test your protractor locators with
 
 ## How to install it
 
-Clone this repo
-
-```shell
-$ git clone https://github.com/andresdominguez/elementor-sublime.git
-```
-
-Create a directory called *Elementor* under Sublime's Packages directory and
-copy the cloned directory
-
-```shell
-$ mkdir ~/Library/Application Support/Sublime Text 2/Packages/Elementor
-$ cp elementor-sublime/* ~/Library/Application Support/Sublime Text 2/Packages/Elementor
-```
+Use [package control](https://sublime.wbond.net/packages/Elementor) to look for "Elementor"
 
 ## How to use it
 

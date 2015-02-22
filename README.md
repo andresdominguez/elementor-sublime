@@ -4,7 +4,7 @@ elementor-sublime
 A Sublime 3 plugin to test your protractor locators with
 [elementor](https://github.com/andresdominguez/elementor).
 
-Here is the [Sublime 2 plugin version](https://github.com/andresdominguez/elementor-sublime2)
+Here is the [Sublime 2 plugin version](https://github.com/andresdominguez/elementor-sublime/tree/master)
 
 ## How to install it
 
@@ -38,5 +38,5 @@ See the results in the status bar.
 |Platform  | Shortcut        |
 |----------|-----------------|
 | Mac      | control Shift E |
-| Windows  | Alt Shift E     |
-| Linux    | Alt Shift E     |
+| Windows  | Alt Shift P     |
+| Linux    | Alt Shift P     |

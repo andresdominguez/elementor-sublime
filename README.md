@@ -11,7 +11,7 @@ Here is the [Sublime 2 plugin version](https://github.com/andresdominguez/elemen
 Clone this repo
 
 ```shell
-$ git clone https://github.com/andresdominguez/elementor-sublime.git
+$ git clone -b st3 https://github.com/andresdominguez/elementor-sublime.git
 ```
 
 Create a directory called *Elementor* under Sublime's Packages directory and
